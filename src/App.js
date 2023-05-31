@@ -1,25 +1,14 @@
-import logo from './logo.svg';
+import React from 'react';
+import ColorBox from './ColorBox.js';
 import './App.css';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Tan Dung || THACO
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <section>
+      <ColorBox color="red"></ColorBox>
+      <ColorBox color="blue"></ColorBox>
+      <ColorBox color="yellow"></ColorBox>
+      <ColorBox color="green"></ColorBox>
+    </section>
+  )
 }
-
-export default App;
