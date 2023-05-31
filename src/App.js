@@ -10,5 +10,5 @@ export default function App() {
       <ColorBox color="yellow"></ColorBox>
       <ColorBox color="green"></ColorBox>
     </section>
-  )
+  );
 }
