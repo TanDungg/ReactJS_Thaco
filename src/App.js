@@ -1,5 +1,5 @@
 import React from 'react';
-import ColorBox from './ColorBox.js';
+import ColorBox from './ColorBox.jsx';
 
 export default function App() {
   return (
