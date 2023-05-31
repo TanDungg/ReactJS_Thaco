@@ -1,6 +1,6 @@
 import React from 'react';
 import ColorBox from './ColorBox.jsx';
-
+import './App.css';
 export default function App() {
   return (
     <section>
