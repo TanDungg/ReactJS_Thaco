@@ -1,13 +1,23 @@
 import React from 'react';
-import ColorBox from './ColorBox.jsx';
+import logo from './logo.svg';
 import './App.css';
-export default function App() {
+
+function App() {
+  const age = 18;
+  const isFemale = true;
+  const student = {
+    name: 'Thaco'
+  };
+  const colorList = ['red', 'green', 'blue'];
+
   return (
-    <section>
-      <ColorBox color="red"></ColorBox>
-      <ColorBox color="blue"></ColorBox>
-      <ColorBox color="yellow"></ColorBox>
-      <ColorBox color="green"></ColorBox>
-    </section>
+    <div className='App'>
+      <header className='App-header'>
+        <img src={logo} className='App-logo' alt='logo' />
+        <p>Tan Dung</p>
+      </header>
+    </div>
   );
 }
+
+export default App;
