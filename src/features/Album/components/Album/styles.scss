@@ -1,0 +1,13 @@
+.album{
+    margin-left: 40px;
+    &_url{
+        & > img{
+            width: 400px;
+            height: 250px;
+            border-radius: 0.5rem;
+        }
+    }
+    &_name{
+        font-weight: bold;
+    }
+}
