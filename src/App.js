@@ -1,12 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import TodoFeatures from './features/Todo'
+import AlbumFeatures from './features/Album'
 import './App.css';
 
 function App() {
   return (
     <div className='App'>
-      <TodoFeatures />
+      {/* <TodoFeatures />
+      <br /> */}
+      <AlbumFeatures />
     </div>
   );
 }
