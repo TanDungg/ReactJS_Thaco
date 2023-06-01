@@ -36,8 +36,9 @@
     transform: rotate(360deg);
   }
 }
-.h1{
+h1{
   font-weight: bold;
+  text-decoration: none;
 }
 .menu {
   display: flex;
@@ -58,6 +59,7 @@
 .menu-list li a {
   color: #333;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .menu-list li a:hover {
@@ -66,6 +68,9 @@
 .active {
   color: red !important;
   font-weight: bold;
+}
+.body-thaco{
+  margin-top: 50px;
 }
 
 

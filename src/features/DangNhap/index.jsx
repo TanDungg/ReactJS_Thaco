@@ -15,9 +15,9 @@ const Login = () => {
 
     return (
         <div className="login-container">
-            <h2>Đăng nhập</h2>
+            <h2>THACO INDUSTRIES</h2>
             <form onSubmit={handleSubmit}>
-                <div>
+                <div className='login-menu'>
                     <label>Email:</label>
                     <input
                         type="email"
@@ -25,7 +25,7 @@ const Login = () => {
                         onChange={(event) => setEmail(event.target.value)}
                     />
                 </div>
-                <div>
+                <div className='login-menu'>
                     <label>Mật khẩu:</label>
                     <input
                         type="password"
@@ -33,7 +33,9 @@ const Login = () => {
                         onChange={(event) => setPassword(event.target.value)}
                     />
                 </div>
-                <button type="submit">Đăng nhập</button>
+                <div className='button-login'>
+                    <button type="submit">Đăng nhập</button>
+                </div>
             </form>
         </div>
     );

@@ -1,10 +1,11 @@
 import React from 'react';
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { Route, NavLink, Routes, Link } from 'react-router-dom';
 import './App.css';
 import Color from './Color';
 import AlbumFeatures from './features/Album';
 import TodoFeatures from './features/Todo';
 import Login from './features/DangNhap';
+import DeviceManagement from './QuanLyThietBiCNTT';
 
 const Menu = () => {
   return (
@@ -16,17 +17,22 @@ const Menu = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/albums" activeClassName="active-menu" exact>
+          <NavLink to="/albums" exact>
             Albums
           </NavLink>
         </li>
         <li>
-          <NavLink to="/colors" activeClassName="active-menu" exact>
+          <NavLink to="/colors" exact>
             Colors
           </NavLink>
         </li>
         <li>
-          <NavLink to="/dangnhaps" activeClassName="active-menu" exact>
+          <NavLink to="/devicemanagers" exact>
+            Quản lý thiết bị CNTT
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/dangnhaps" exact>
             Đăng nhập
           </NavLink>
         </li>
@@ -38,17 +44,24 @@ const Menu = () => {
 function App() {
   return (
     <div className="App">
-      <h1>
-        THACO TRƯỜNG HẢI</h1>
-      <Menu />
-      <Routes>
-        <Route path="/todos" element={<TodoFeatures />} />
-        <Route path="/albums" element={<AlbumFeatures />} />
-        <Route path="/colors" element={<Color />} />
-        <Route path="/dangnhaps" element={<Login />} />
-      </Routes>
+      <header>
+        <h1>
+          <Link to="/" exact>
+            THACO TRƯỜNG HẢI
+          </Link>
+        </h1>
+        <Menu />
+      </header>
+      <body className='body-thaco'>
+        <Routes>
+          <Route path="/todos" element={<TodoFeatures />} />
+          <Route path="/albums" element={<AlbumFeatures />} />
+          <Route path="/colors" element={<Color />} />
+          <Route path="/devicemanagers" element={<DeviceManagement />} />
+          <Route path="/dangnhaps" element={<Login />} />
+        </Routes>
+      </body>
     </div>
   );
 }
-
 export default App;
