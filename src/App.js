@@ -1,34 +1,28 @@
-import React, { useState } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import React from 'react';
+import { NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Color from './Color';
 import AlbumFeatures from './features/Album';
 import TodoFeatures from './features/Todo';
 
 const Menu = () => {
-  const [activeItem, setActiveItem] = useState('');
-
-  const handleItemClick = (itemName) => {
-    setActiveItem(itemName);
-  };
-
   return (
     <nav className="menu">
       <ul className="menu-list">
-        <li className={activeItem === 'todos' ? 'active' : ''}>
-          <Link to="/todos" onClick={() => handleItemClick('todos')}>
+        <li>
+          <NavLink to="/todos" activeClassName="active-menu" exact>
             Todos
-          </Link>
+          </NavLink>
         </li>
-        <li className={activeItem === 'albums' ? 'active' : ''}>
-          <Link to="/albums" onClick={() => handleItemClick('albums')}>
+        <li>
+          <NavLink to="/albums" activeClassName="active-menu" exact>
             Albums
-          </Link>
+          </NavLink>
         </li>
-        <li className={activeItem === 'colors' ? 'active' : ''}>
-          <Link to="/colors" onClick={() => handleItemClick('colors')}>
+        <li>
+          <NavLink to="/colors" activeClassName="active-menu" exact>
             Colors
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>
@@ -38,7 +32,8 @@ const Menu = () => {
 function App() {
   return (
     <div className="App">
-      <h1>THACO TRƯỜNG HẢI</h1>
+      <h1>
+        THACO TRƯỜNG HẢI</h1>
       <Menu />
       <Routes>
         <Route path="/todos" element={<TodoFeatures />} />
