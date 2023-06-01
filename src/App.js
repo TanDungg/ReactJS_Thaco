@@ -4,6 +4,7 @@ import './App.css';
 import Color from './Color';
 import AlbumFeatures from './features/Album';
 import TodoFeatures from './features/Todo';
+import Login from './features/DangNhap';
 
 const Menu = () => {
   return (
@@ -24,6 +25,11 @@ const Menu = () => {
             Colors
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/dangnhaps" activeClassName="active-menu" exact>
+            Đăng nhập
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
@@ -39,6 +45,7 @@ function App() {
         <Route path="/todos" element={<TodoFeatures />} />
         <Route path="/albums" element={<AlbumFeatures />} />
         <Route path="/colors" element={<Color />} />
+        <Route path="/dangnhaps" element={<Login />} />
       </Routes>
     </div>
   );

@@ -8,9 +8,7 @@ function Color(props) {
     const [color, setColor] = useState('White');
     return (
         <div>
-            {color}
-            <br />
-            <button style={{ backgroundColor: color }}>
+            <button style={{ backgroundColor: color, color: 'black' }}>
                 {color}
             </button>
 
