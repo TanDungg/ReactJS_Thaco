@@ -1,15 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Album from '../Album'
-import './styles.scss'
+import PropTypes from 'prop-types';
 
 AlbumList.propTypes = {
     albumList: PropTypes.array.isRequired,
 };
 
-function AlbumList(albumList) {
+function AlbumList({ albumList }) {
     return (
-        <ul className='album-list'>
+        <ul className='album-List'>
             {albumList.map(album => (
                 <li key={album.id}>
                     <Album album={album} />
