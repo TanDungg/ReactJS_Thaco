@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import TodoList from "./components/TodoList";
+import TodoList from "../../components/TodoList";
 
-TodoFeatures.propTypes = {};
-
-function TodoFeatures(props) {
+const ListPage = () => {
   const initTodoList = [
     {
       id: 1,
@@ -12,7 +10,7 @@ function TodoFeatures(props) {
     },
     {
       id: 2,
-      title: "Slpeep",
+      title: "Sleep",
       status: "completed",
     },
     {
@@ -24,27 +22,32 @@ function TodoFeatures(props) {
   const [todoList, setTodoList] = useState(initTodoList);
   const [filteredStatus, setFilteredStatus] = useState("all");
 
-  const handleTodoClick = (todo, idx) => {
-    const newTodoList = [...todoList];
-    newTodoList[idx] = {
-      ...newTodoList[idx],
-      status: newTodoList[idx].status === "new" ? "completed" : "new",
-    };
+  const handleTodoClick = (id) => {
+    const newTodoList = todoList.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, status: todo.status === "new" ? "completed" : "new" };
+      }
+      return todo;
+    });
     setTodoList(newTodoList);
   };
+
   const handleShowAll = () => {
     setFilteredStatus("all");
   };
+
   const handleShowComplete = () => {
     setFilteredStatus("completed");
   };
+
   const handleShowNew = () => {
     setFilteredStatus("new");
   };
+
   const renderedTodoList = todoList.filter(
     (todo) => filteredStatus === "all" || filteredStatus === todo.status
   );
-  console.log(renderedTodoList);
+
   return (
     <div>
       <h3>TodoList</h3>
@@ -54,6 +57,6 @@ function TodoFeatures(props) {
       <button onClick={handleShowNew}>Show New</button>
     </div>
   );
-}
+};
 
-export default TodoFeatures;
+export default ListPage;

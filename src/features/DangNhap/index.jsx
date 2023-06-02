@@ -1,44 +1,49 @@
 import React, { useState } from 'react';
-import './styles.scss'
+import './LoginStyles.scss'
 
-const Login = () => {
-    const [email, setEmail] = useState('');
+const LgoinTHACO = () => {
+    const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
         // Thực hiện xử lý đăng nhập ở đây
-        console.log('Email:', email);
+        console.log('User:', user);
         console.log('Password:', password);
         // Gọi API hoặc thực hiện các công việc khác liên quan đến đăng nhập
     };
-
     return (
-        <div className="login-container">
-            <h2>THACO INDUSTRIES</h2>
+        <div className='div-login'>
+            <div className='lable-login'>
+                <label>ĐĂNG NHẬP</label>
+                <br />
+                <label>THACO INDUSTRIES</label>
+            </div>
             <form onSubmit={handleSubmit}>
-                <div className='login-menu'>
-                    <label>Email:</label>
+                <div className='form-login'>
+                    <label>Tên đăng nhập:</label>
                     <input
-                        type="email"
-                        value={email}
-                        onChange={(event) => setEmail(event.target.value)}
+                        type='Tên đăng nhập'
+                        value={user}
+                        onChange={(event) => setUser(event.target.value)}
                     />
                 </div>
-                <div className='login-menu'>
+                <div className='form-login'>
                     <label>Mật khẩu:</label>
                     <input
-                        type="password"
+                        type='password'
                         value={password}
                         onChange={(event) => setPassword(event.target.value)}
                     />
                 </div>
-                <div className='button-login'>
-                    <button type="submit">Đăng nhập</button>
+                <div>
+                    <button className='button-login'>
+                        Đăng nhập
+                    </button>
                 </div>
             </form>
         </div>
     );
-};
+}
 
-export default Login;
+export default LgoinTHACO;

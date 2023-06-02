@@ -1,0 +1,33 @@
+.div-login {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+input {
+    width: 60%;
+    padding: 10px;
+    margin: 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-login {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.lable-login {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: dodgerblue;
+}
+.button-login {
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 50px;
+}
